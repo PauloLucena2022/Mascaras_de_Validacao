@@ -4,6 +4,7 @@ gamma = set("ABCDEFGHIJKLMNOPQRSTUVWXYZ")
 n = set("0123456789")
 #-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 # Máscaras de Validação
+#1. NOME
 def validar_nome(cadeia):
     if cadeia.count(" ") != 1:
         return False
@@ -25,6 +26,7 @@ def validar_nome(cadeia):
 
     return True
 #-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+#2. E-MAIL
 def validar_email(cadeia):
     if cadeia.count("@") != 1 or not cadeia.endswith(".br"):
         return False
@@ -44,6 +46,7 @@ def validar_email(cadeia):
 
     return True
 #-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+#3. SENHA
 def validar_senha(cadeia):
     if len(cadeia) != 8:
         return False
@@ -65,6 +68,7 @@ def validar_senha(cadeia):
 
     return validacao
 #-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+#4. CPF
 def validar_cpf(cadeia):
     #xxx.xxx.xxx-xx são 14 caracteres
     if len(cadeia) != 14:
@@ -82,6 +86,7 @@ def validar_cpf(cadeia):
 
     return True
 #-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+#5. TELEFONE
 def validar_telefone(cadeia):
     # Formato: (xx) 9xxxx-xxxx são 15 caracteres
     if len(cadeia) == 15:
